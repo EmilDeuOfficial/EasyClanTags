@@ -1,0 +1,339 @@
+prefix: "<dark_gray>[<gold>EasyClanTags</gold>]</dark_gray> <gray>"
+
+err:
+  no-permission: "<red>その操作を行う権限がありません。"
+  player-only: "<red>このコマンドはプレイヤーのみ使用できます。"
+  disabled: "<red>EasyClanTags はオフになっています。"
+  usage: "<red>使い方: <white><usage>"
+  player-not-found: "<red>プレイヤー <white><player></white> が見つかりません。"
+  clan:
+    unknown: "<red><white><clan></white> に一致するクランはありません。"
+    already: "<red>すでにクランに所属しています。"
+    none: "<red>クランに所属していません。"
+    none-other: "<red>そのプレイヤーはクランに所属していません。"
+    not-owner: "<red>クランのオーナーだけが実行できます。"
+    name-invalid: "<red>クラン名は使用可能な文字で <white><min></white> から <white><max></white> 文字にしてください。"
+    name-taken: "<red>クラン名 <white><clan></white> はすでに使われています。"
+    full: "<red>クランは満員です (<white><max></white> 人)。"
+    owner-cannot-leave: "<red>オーナーは脱退できません。オーナーを譲渡するか、クランを解散してください。"
+  target:
+    self: "<red>自分自身には実行できません。"
+    in-clan: "<white><player></white> <red>はすでにクランに所属しています。"
+    not-member: "<white><player></white> <red>はあなたのクランのメンバーではありません。"
+  invite:
+    none: "<red>該当する招待がありません。"
+    choose: "<red>招待が複数あります。クラン名を指定してください。"
+  tag:
+    empty: "<red>タグを空にはできません。"
+    length: "<red>タグは <white><min></white> から <white><max></white> 文字にしてください。"
+    chars: "<red>タグに使用できない文字が含まれています。"
+    blacklisted: "<red>タグに禁止ワード <white><word></white> が含まれています。"
+    taken: "<red>タグ <white><tag></white> はクラン <white><clan></white> がすでに使用しています。"
+    none: "<red>そのクランにはタグがありません。"
+    unknown: "<red>タグ <white><tag></white> を使用しているクランはありません。"
+  format:
+    disabled: "<red>書式 <white><format></white> はこのサーバーで無効です。"
+    no-permission: "<red>書式 <white><format></white> を使用する権限がありません。"
+  color:
+    hex-denied: "<red>使用できるのは標準の 16 色だけです。"
+    invalid-hex: "<red>無効な Hex コードです。例: <white>#FF8800</white>"
+  gradient:
+    disabled: "<red>グラデーションはこのサーバーで無効です。"
+    no-permission: "<red>グラデーションを使用する権限がありません。"
+    needs-hex: "<red>グラデーションには Hex カラーの権限が必要です。"
+  cooldown: "<red>クランのタグは <white><time></white> 後に変更できます。"
+
+ok:
+  clan:
+    created: "<green>クラン <white><clan></white> を作成しました。<white>/clantag</white> を開いてタグを作成してください。"
+    disbanded: "<green>クラン <white><clan></white> を解散しました。"
+    left: "<green>クラン <white><clan></white> を脱退しました。"
+  invite:
+    sent: "<green><white><player></white> を <white><clan></white> に招待しました。"
+    accepted: "<green><white><clan></white> に参加しました。"
+    denied: "<green><white><clan></white> からの招待を断りました。"
+  member:
+    kicked: "<green><white><player></white> をクランから追放しました。"
+  owner:
+    transferred: "<green><white><player></white> が新しいクランオーナーです。"
+  tag:
+    set: "<green>クランタグを <white><tag></white> に設定しました。"
+  admin:
+    removed: "<green>クラン <white><clan></white> のタグを削除しました。"
+    deleted: "<green>タグ <white><tag></white> のクラン <white><clan></white> を削除しました。"
+
+note:
+  invited: "<white><player></white> があなたをクラン <white><clan></white> に招待しました。<white><seconds></white> 秒以内に <white>/clantag accept <clan></white> を使うか、<white>/clantag</white> を開いてください。"
+  joined: "<white><player></white> がクランに参加しました。"
+  left: "<white><player></white> がクランを脱退しました。"
+  kicked: "<red>クラン <white><clan></white> から追放されました。"
+  transferred: "<white><player></white> がクランの新しいオーナーです。"
+  disbanded: "<red>クラン <white><clan></white> は解散されました。"
+
+input:
+  clan-name: "<yellow>クラン名をチャットに入力してください。"
+  tag-text: "<yellow>タグの文字をチャットに入力してください。"
+  hex: "<yellow><white>#FF8800</white> のような Hex カラーをチャットに入力してください。"
+  hint: "<gray>中止するには <white>cancel</white> と入力してください。"
+  timeout: "<red>入力時間が過ぎました。"
+  cancelled: "<gray>入力を中止しました。"
+
+preview:
+  header: "<gold>タグのプレビュー"
+  nametag: "<gray>ネームタグ: <nametag>"
+  tab: "<gray>タブリスト: <tab>"
+  chat: "<gray>チャット: <chat>"
+
+cmd:
+  reloaded: "<green>設定と言語ファイルを再読み込みしました。"
+  "on": "<green>EasyClanTags をオンにしました。"
+  "off": "<yellow>EasyClanTags をオフにしました。タグは非表示になりますが、データは削除されません。"
+  delete-confirm: "<yellow>クランが解散されます。続けるには <white>/<label> delete confirm</white> を実行してください。"
+  status:
+    - "<gold>EasyClanTags の状態"
+    - "<gray>状態: <state>"
+    - "<gray>クラン数: <white><clans></white>、タグを持つプレイヤー: <white><tagged></white>"
+    - "<gray>保存先: <white><storage></white>、言語: <white><language></white>"
+  help:
+    header: "<gold>EasyClanTags のコマンド"
+    line: "<gray>/<label> <white><sub></white> <gray><usage> - <description>"
+  description:
+    "on": "プラグインをオンにする"
+    "off": "プラグインをオフにする"
+    status: "現在の状態を表示する"
+    reload: "設定と言語ファイルを再読み込みする"
+    create: "クランを作成する"
+    delete: "自分のクランを解散する"
+    invite: "プレイヤーを招待する"
+    accept: "招待を承諾する"
+    deny: "招待を断る"
+    leave: "クランを脱退する"
+    kick: "メンバーを追放する"
+    transfer: "オーナーを譲渡する"
+    info: "クランの詳細を表示する"
+    list: "すべてのクランを一覧表示する"
+    admin: "管理用コマンド"
+  info:
+    - "<gold>クラン <white><clan>"
+    - "<gray>タグ: <tag>"
+    - "<gray>オーナー: <white><owner>"
+    - "<gray>メンバー (<white><members></white>/<white><max></white>): <white><names>"
+  list:
+    header: "<gold>クラン一覧 (<count>)"
+    entry: "<gray>- <white><clan></white> <tag> <dark_gray>(<members> 人)"
+
+gui:
+  none: "<gray>なし"
+  role:
+    owner: "<gold>オーナー"
+    member: "<white>メンバー"
+  status:
+    online: "<green>オンライン"
+    offline: "<gray>オフライン"
+  state:
+    "on": "<green>オン"
+    "off": "<red>オフ"
+  preview:
+    disabled: "<gray>(オフ)"
+    sample: "こんにちは!"
+  gradient:
+    pick-start: "<yellow>グラデーション: 開始色を選んでください"
+    pick-end: "<yellow>グラデーション: 終了色を選んでください"
+  main:
+    title: "クランタグ"
+  members:
+    title: "<clan> のメンバー"
+  member-action:
+    title: "<player> の管理"
+  invite:
+    title: "プレイヤーを招待"
+  invites:
+    title: "届いている招待"
+  editor:
+    title: "タグエディタ"
+  confirm:
+    leave:
+      title: "クランを脱退しますか?"
+    disband:
+      title: "クランを解散しますか?"
+    transfer:
+      title: "<player> をオーナーにしますか?"
+  item:
+    info:
+      name: "<gold>クラン情報"
+      lore:
+        - "<gray>クラン: <white><clan>"
+        - "<gray>タグ: <tag>"
+        - "<gray>オーナー: <white><owner>"
+        - "<gray>メンバー: <white><members></white>/<white><max>"
+        - "<gray>あなたの役割: <role>"
+      lore-none:
+        - "<gray>クランに所属していません。"
+        - "<gray>クランを作成するか、招待を承諾してください。"
+    create-clan:
+      name: "<green>クランを作成"
+      lore:
+        - "<gray>クリックしてクラン名を"
+        - "<gray>チャットに入力します。"
+    edit-tag:
+      name: "<yellow>タグを編集"
+      lore:
+        - "<gray>現在のタグ: <tag>"
+        - ""
+        - "<yellow>クリックしてエディタを開く"
+      lore-new:
+        - "<gray>クランにはまだタグがありません。"
+        - ""
+        - "<yellow>クリックして作成"
+    members:
+      name: "<aqua>メンバー"
+      lore:
+        - "<gray><white><clan></white> の全員を表示"
+      lore-owner:
+        - "<gray>招待、追放、他のメンバーへの"
+        - "<gray>オーナー譲渡ができます。"
+    preview:
+      name: "<light_purple>タグのプレビュー"
+      lore:
+        - "<gray>クリックするとネームタグ、タブリスト、"
+        - "<gray>チャットでの見え方を確認できます。"
+    invites:
+      name: "<yellow>招待"
+      lore:
+        - "<gray>未対応の招待が <white><count></white> 件あります。"
+        - "<yellow>クリックして表示"
+    leave:
+      name: "<red>クランを脱退"
+      lore:
+        - "<white><clan></white> <gray>を脱退します。"
+    disband:
+      name: "<red>クランを解散"
+      lore:
+        - "<white><clan></white> <gray>とそのタグを"
+        - "<gray>全メンバーから削除します。"
+    back:
+      name: "<gray>戻る"
+    back-small:
+      name: "<gray>戻る"
+    dialog-confirm:
+      name: "<green>確認"
+    dialog-cancel:
+      name: "<red>キャンセル"
+    invite-entry:
+      name: "<white><clan>"
+      lore:
+        - "<gray>タグ: <tag>"
+        - "<gray>オーナー: <white><owner>"
+        - "<gray>メンバー: <white><members></white>/<white><max>"
+        - ""
+        - "<green>左クリック: 承諾"
+        - "<red>右クリック: 断る"
+    confirm:
+      name: "<green>タグを保存"
+      lore:
+        - "<gray>タグを確認してクランに"
+        - "<gray>保存します。"
+    cancel:
+      name: "<red>キャンセル"
+      lore:
+        - "<gray>すべての変更を破棄します。"
+    prev-page:
+      name: "<gray>前のページ"
+    next-page:
+      name: "<gray>次のページ"
+    invite-player:
+      name: "<green>プレイヤーを招待"
+      lore:
+        - "<gray>クランに入っていないオンラインの"
+        - "<gray>プレイヤーを選びます。"
+    member:
+      name: "<white><player>"
+      lore-owner:
+        - "<gold>オーナー"
+        - "<status>"
+      lore-member:
+        - "<gray>メンバー"
+        - "<status>"
+      lore-manage:
+        - "<gray>メンバー"
+        - "<status>"
+        - ""
+        - "<yellow>クリックして管理"
+      lore-action:
+        - "<status>"
+      lore-invite:
+        - "<yellow>クリックして招待"
+    kick:
+      name: "<red><player> を追放"
+      lore:
+        - "<gray>プレイヤーをクランから外します。"
+    transfer:
+      name: "<gold><player> をオーナーにする"
+      lore:
+        - "<gray>あなたは通常のメンバーになります。"
+    letter:
+      name: "<letter>"
+      lore:
+        - "<gray><white><index></white> 文字目、色 <white><hex>"
+        - ""
+        - "<yellow>クリックして選択"
+      lore-selected:
+        - "<gray><white><index></white> 文字目、色 <white><hex>"
+        - ""
+        - "<green>選択中: 次に選ぶ色がここに適用されます"
+    palette:
+      name: "<color>"
+      lore:
+        - "<gray>クリックしてこの色を使う"
+    hex-color:
+      name: "<aqua>Hex カラーを指定"
+      lore:
+        - "<gray>クリックして <white>#FF8800</white> のような"
+        - "<gray>Hex コードをチャットに入力します。"
+    apply-all:
+      name: "<aqua>全文字を同じ色にする"
+      lore:
+        - "<gray>選択中の文字の色を"
+        - "<gray>すべての文字にコピーします。"
+    gradient:
+      name: "<light_purple>グラデーション"
+      lore:
+        - "<gray>クリックして開始色と"
+        - "<gray>終了色を選びます。"
+      lore-start:
+        - "<yellow>開始色を選んでください。"
+        - "<gray>もう一度クリックで中止。"
+      lore-end:
+        - "<yellow>終了色を選んでください。"
+        - "<gray>もう一度クリックで中止。"
+    format-bold:
+      name: "<white><bold>太字"
+      lore:
+        - "<gray>状態: <state>"
+    format-italic:
+      name: "<white><italic>斜体"
+      lore:
+        - "<gray>状態: <state>"
+    format-underline:
+      name: "<white><underlined>下線"
+      lore:
+        - "<gray>状態: <state>"
+    format-strikethrough:
+      name: "<white><strikethrough>取り消し線"
+      lore:
+        - "<gray>状態: <state>"
+    format-obfuscated:
+      name: "<white><obfuscated>Obf</obfuscated> 難読化"
+      lore:
+        - "<gray>状態: <state>"
+    change-text:
+      name: "<yellow>文字を変更"
+      lore:
+        - "<gray>クリックして新しいタグの文字を入力します。"
+        - "<gray>色は合う位置に引き継がれます。"
+    editor-preview:
+      name: "<gold>ライブプレビュー"
+      lore:
+        - "<gray>ネームタグ: <nametag>"
+        - "<gray>タブリスト: <tab>"
+        - "<gray>チャット: <chat>"

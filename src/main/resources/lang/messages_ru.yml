@@ -1,0 +1,338 @@
+prefix: "<dark_gray>[<gold>EasyClanTags</gold>]</dark_gray> <gray>"
+
+err:
+  no-permission: "<red>У вас нет прав для этого."
+  player-only: "<red>Эту команду может использовать только игрок."
+  disabled: "<red>EasyClanTags выключен."
+  usage: "<red>Использование: <white><usage>"
+  player-not-found: "<red>Игрок <white><player></white> не найден."
+  clan:
+    unknown: "<red>Нет клана, подходящего под <white><clan></white>."
+    already: "<red>Вы уже состоите в клане."
+    none: "<red>Вы не состоите в клане."
+    none-other: "<red>Этот игрок не состоит в клане."
+    not-owner: "<red>Это может сделать только владелец клана."
+    name-invalid: "<red>Название клана: от <white><min></white> до <white><max></white> допустимых символов."
+    name-taken: "<red>Название клана <white><clan></white> уже занято."
+    full: "<red>Клан заполнен (<white><max></white> участников)."
+    owner-cannot-leave: "<red>Владелец не может выйти. Передайте клан или распустите его."
+  target:
+    self: "<red>Вы не можете сделать это с самим собой."
+    in-clan: "<white><player></white> <red>уже состоит в клане."
+    not-member: "<white><player></white> <red>не состоит в вашем клане."
+  invite:
+    none: "<red>Подходящего приглашения нет."
+    choose: "<red>У вас несколько приглашений. Укажите название клана."
+  tag:
+    empty: "<red>Тег не может быть пустым."
+    length: "<red>Тег должен содержать от <white><min></white> до <white><max></white> символов."
+    chars: "<red>Тег содержит недопустимые символы."
+    blacklisted: "<red>Тег содержит запрещенное слово <white><word></white>."
+    taken: "<red>Тег <white><tag></white> уже используется кланом <white><clan></white>."
+    none: "<red>У этого клана нет тега."
+    unknown: "<red>Ни один клан не использует тег <white><tag></white>."
+  format:
+    disabled: "<red>Формат <white><format></white> отключен на этом сервере."
+    no-permission: "<red>Вам нельзя использовать формат <white><format></white>."
+  color:
+    hex-denied: "<red>Вы можете использовать только 16 стандартных цветов."
+    invalid-hex: "<red>Это неверный hex-код. Пример: <white>#FF8800</white>."
+  gradient:
+    disabled: "<red>Градиенты отключены на этом сервере."
+    no-permission: "<red>Вам нельзя использовать градиенты."
+    needs-hex: "<red>Для градиентов нужно право на hex-цвета."
+  cooldown: "<red>Клан сможет изменить тег снова через <white><time></white>."
+
+ok:
+  clan:
+    created: "<green>Клан <white><clan></white> создан. Откройте <white>/clantag</white>, чтобы создать тег."
+    disbanded: "<green>Клан <white><clan></white> распущен."
+    left: "<green>Вы покинули клан <white><clan></white>."
+  invite:
+    sent: "<green><white><player></white> приглашен в <white><clan></white>."
+    accepted: "<green>Вы вступили в <white><clan></white>."
+    denied: "<green>Приглашение от <white><clan></white> отклонено."
+  member:
+    kicked: "<green><white><player></white> исключен из клана."
+  owner:
+    transferred: "<green><white><player></white> теперь владелец клана."
+  tag:
+    set: "<green>Тег клана теперь <white><tag></white>."
+  admin:
+    removed: "<green>Тег клана <white><clan></white> удален."
+    deleted: "<green>Клан <white><clan></white> с тегом <white><tag></white> удален."
+
+note:
+  invited: "<white><player></white> пригласил вас в клан <white><clan></white>. Используйте <white>/clantag accept <clan></white> в течение <white><seconds></white> с или откройте <white>/clantag</white>."
+  joined: "<white><player></white> вступил в клан."
+  left: "<white><player></white> покинул клан."
+  kicked: "<red>Вы исключены из клана <white><clan></white>."
+  transferred: "<white><player></white> теперь владелец клана."
+  disbanded: "<red>Клан <white><clan></white> распущен."
+
+input:
+  clan-name: "<yellow>Напишите название клана в чат."
+  tag-text: "<yellow>Напишите текст тега в чат."
+  hex: "<yellow>Напишите hex-цвет, например <white>#FF8800</white>, в чат."
+  hint: "<gray>Напишите <white>cancel</white>, чтобы отменить."
+  timeout: "<red>Время ввода истекло."
+  cancelled: "<gray>Ввод отменен."
+
+preview:
+  header: "<gold>Предпросмотр тега"
+  nametag: "<gray>Ник над головой: <nametag>"
+  tab: "<gray>Список игроков: <tab>"
+  chat: "<gray>Чат: <chat>"
+
+cmd:
+  reloaded: "<green>Конфигурация и языковые файлы перезагружены."
+  "on": "<green>EasyClanTags включен."
+  "off": "<yellow>EasyClanTags выключен. Теги скрыты, данные не удалены."
+  delete-confirm: "<yellow>Это распустит ваш клан. Введите <white>/<label> delete confirm</white>, чтобы продолжить."
+  status:
+    - "<gold>Статус EasyClanTags"
+    - "<gray>Состояние: <state>"
+    - "<gray>Кланов: <white><clans></white>, игроков с тегом: <white><tagged></white>"
+    - "<gray>Хранилище: <white><storage></white>, язык: <white><language></white>"
+  help:
+    header: "<gold>Команды EasyClanTags"
+    line: "<gray>/<label> <white><sub></white> <gray><usage> - <description>"
+  description:
+    "on": "Включить плагин"
+    "off": "Выключить плагин"
+    status: "Показать состояние"
+    reload: "Перезагрузить конфиг и языки"
+    create: "Создать клан"
+    delete: "Распустить свой клан"
+    invite: "Пригласить игрока"
+    accept: "Принять приглашение"
+    deny: "Отклонить приглашение"
+    leave: "Покинуть клан"
+    kick: "Исключить участника"
+    transfer: "Передать владение"
+    info: "Показать данные клана"
+    list: "Список всех кланов"
+    admin: "Административные команды"
+  info:
+    - "<gold>Клан <white><clan>"
+    - "<gray>Тег: <tag>"
+    - "<gray>Владелец: <white><owner>"
+    - "<gray>Участники (<white><members></white>/<white><max></white>): <white><names>"
+  list:
+    header: "<gold>Кланы (<count>)"
+    entry: "<gray>- <white><clan></white> <tag> <dark_gray>(участников: <members>)"
+
+gui:
+  none: "<gray>нет"
+  role:
+    owner: "<gold>Владелец"
+    member: "<white>Участник"
+  status:
+    online: "<green>в сети"
+    offline: "<gray>не в сети"
+  state:
+    "on": "<green>вкл"
+    "off": "<red>выкл"
+  preview:
+    disabled: "<gray>(выкл)"
+    sample: "Привет!"
+  gradient:
+    pick-start: "<yellow>Градиент: выберите начальный цвет"
+    pick-end: "<yellow>Градиент: выберите конечный цвет"
+  main:
+    title: "Тег клана"
+  members:
+    title: "Участники <clan>"
+  member-action:
+    title: "Управление: <player>"
+  invite:
+    title: "Пригласить игрока"
+  invites:
+    title: "Ваши приглашения"
+  editor:
+    title: "Редактор тега"
+  confirm:
+    leave:
+      title: "Покинуть клан?"
+    disband:
+      title: "Распустить клан?"
+    transfer:
+      title: "Сделать <player> владельцем?"
+  item:
+    info:
+      name: "<gold>Информация о клане"
+      lore:
+        - "<gray>Клан: <white><clan>"
+        - "<gray>Тег: <tag>"
+        - "<gray>Владелец: <white><owner>"
+        - "<gray>Участники: <white><members></white>/<white><max>"
+        - "<gray>Ваша роль: <role>"
+      lore-none:
+        - "<gray>Вы не состоите в клане."
+        - "<gray>Создайте клан или примите приглашение."
+    create-clan:
+      name: "<green>Создать клан"
+      lore:
+        - "<gray>Нажмите и напишите название"
+        - "<gray>клана в чат."
+    edit-tag:
+      name: "<yellow>Изменить тег"
+      lore:
+        - "<gray>Текущий тег: <tag>"
+        - ""
+        - "<yellow>Нажмите, чтобы открыть редактор"
+      lore-new:
+        - "<gray>У вашего клана еще нет тега."
+        - ""
+        - "<yellow>Нажмите, чтобы создать"
+    members:
+      name: "<aqua>Участники"
+      lore:
+        - "<gray>Показать всех в <white><clan>"
+      lore-owner:
+        - "<gray>Приглашайте, исключайте или"
+        - "<gray>передайте клан другому участнику."
+    preview:
+      name: "<light_purple>Предпросмотр тега"
+      lore:
+        - "<gray>Нажмите, чтобы увидеть тег над головой,"
+        - "<gray>в списке игроков и в чате."
+    invites:
+      name: "<yellow>Приглашения"
+      lore:
+        - "<gray>Открытых приглашений: <white><count></white>."
+        - "<yellow>Нажмите для просмотра"
+    leave:
+      name: "<red>Покинуть клан"
+      lore:
+        - "<gray>Покинуть <white><clan></white>."
+    disband:
+      name: "<red>Распустить клан"
+      lore:
+        - "<gray>Удалить <white><clan></white> и его тег"
+        - "<gray>для всех участников."
+    back:
+      name: "<gray>Назад"
+    back-small:
+      name: "<gray>Назад"
+    dialog-confirm:
+      name: "<green>Подтвердить"
+    dialog-cancel:
+      name: "<red>Отмена"
+    invite-entry:
+      name: "<white><clan>"
+      lore:
+        - "<gray>Тег: <tag>"
+        - "<gray>Владелец: <white><owner>"
+        - "<gray>Участники: <white><members></white>/<white><max>"
+        - ""
+        - "<green>ЛКМ: принять"
+        - "<red>ПКМ: отклонить"
+    confirm:
+      name: "<green>Сохранить тег"
+      lore:
+        - "<gray>Проверяет тег и сохраняет"
+        - "<gray>его для вашего клана."
+    cancel:
+      name: "<red>Отмена"
+      lore:
+        - "<gray>Отменить все изменения."
+    prev-page:
+      name: "<gray>Предыдущая страница"
+    next-page:
+      name: "<gray>Следующая страница"
+    invite-player:
+      name: "<green>Пригласить игрока"
+      lore:
+        - "<gray>Выберите игрока онлайн без клана."
+    member:
+      name: "<white><player>"
+      lore-owner:
+        - "<gold>Владелец"
+        - "<status>"
+      lore-member:
+        - "<gray>Участник"
+        - "<status>"
+      lore-manage:
+        - "<gray>Участник"
+        - "<status>"
+        - ""
+        - "<yellow>Нажмите для управления"
+      lore-action:
+        - "<status>"
+      lore-invite:
+        - "<yellow>Нажмите, чтобы пригласить"
+    kick:
+      name: "<red>Исключить <player>"
+      lore:
+        - "<gray>Исключает игрока из клана."
+    transfer:
+      name: "<gold>Сделать <player> владельцем"
+      lore:
+        - "<gray>Вы станете обычным участником."
+    letter:
+      name: "<letter>"
+      lore:
+        - "<gray>Буква <white><index></white>, цвет <white><hex>"
+        - ""
+        - "<yellow>Нажмите, чтобы выбрать"
+      lore-selected:
+        - "<gray>Буква <white><index></white>, цвет <white><hex>"
+        - ""
+        - "<green>Выбрано: следующий цвет применится здесь"
+    palette:
+      name: "<color>"
+      lore:
+        - "<gray>Нажмите, чтобы выбрать этот цвет"
+    hex-color:
+      name: "<aqua>Свой hex-цвет"
+      lore:
+        - "<gray>Нажмите и напишите в чат hex-код,"
+        - "<gray>например <white>#FF8800</white>."
+    apply-all:
+      name: "<aqua>Один цвет для всех букв"
+      lore:
+        - "<gray>Копирует цвет выбранной буквы"
+        - "<gray>на все буквы."
+    gradient:
+      name: "<light_purple>Градиент"
+      lore:
+        - "<gray>Нажмите, затем выберите начальный"
+        - "<gray>и конечный цвет."
+      lore-start:
+        - "<yellow>Выберите начальный цвет."
+        - "<gray>Нажмите снова для отмены."
+      lore-end:
+        - "<yellow>Выберите конечный цвет."
+        - "<gray>Нажмите снова для отмены."
+    format-bold:
+      name: "<white><bold>Жирный"
+      lore:
+        - "<gray>Состояние: <state>"
+    format-italic:
+      name: "<white><italic>Курсив"
+      lore:
+        - "<gray>Состояние: <state>"
+    format-underline:
+      name: "<white><underlined>Подчеркнутый"
+      lore:
+        - "<gray>Состояние: <state>"
+    format-strikethrough:
+      name: "<white><strikethrough>Зачеркнутый"
+      lore:
+        - "<gray>Состояние: <state>"
+    format-obfuscated:
+      name: "<white><obfuscated>Obf</obfuscated> Скрытый"
+      lore:
+        - "<gray>Состояние: <state>"
+    change-text:
+      name: "<yellow>Изменить текст"
+      lore:
+        - "<gray>Нажмите и напишите новый текст тега."
+        - "<gray>Цвета сохраняются, где это возможно."
+    editor-preview:
+      name: "<gold>Предпросмотр"
+      lore:
+        - "<gray>Ник над головой: <nametag>"
+        - "<gray>Список игроков: <tab>"
+        - "<gray>Чат: <chat>"

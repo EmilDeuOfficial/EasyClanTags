@@ -1,0 +1,338 @@
+prefix: "<dark_gray>[<gold>EasyClanTags</gold>]</dark_gray> <gray>"
+
+err:
+  no-permission: "<red>No tienes permiso para eso."
+  player-only: "<red>Este comando solo lo puede usar un jugador."
+  disabled: "<red>EasyClanTags esta apagado."
+  usage: "<red>Uso: <white><usage>"
+  player-not-found: "<red>No se encontro al jugador <white><player></white>."
+  clan:
+    unknown: "<red>Ningun clan coincide con <white><clan></white>."
+    already: "<red>Ya estas en un clan."
+    none: "<red>No estas en ningun clan."
+    none-other: "<red>Ese jugador no esta en un clan."
+    not-owner: "<red>Solo el dueño del clan puede hacer eso."
+    name-invalid: "<red>Los nombres de clan necesitan de <white><min></white> a <white><max></white> caracteres permitidos."
+    name-taken: "<red>El nombre de clan <white><clan></white> ya esta en uso."
+    full: "<red>El clan esta lleno (<white><max></white> miembros)."
+    owner-cannot-leave: "<red>El dueño no puede salir. Transfiere el clan o disuelvelo."
+  target:
+    self: "<red>No puedes hacer eso contigo mismo."
+    in-clan: "<white><player></white> <red>ya esta en un clan."
+    not-member: "<white><player></white> <red>no esta en tu clan."
+  invite:
+    none: "<red>No tienes ninguna invitacion que coincida."
+    choose: "<red>Tienes varias invitaciones. Indica el nombre del clan."
+  tag:
+    empty: "<red>La etiqueta no puede estar vacia."
+    length: "<red>La etiqueta necesita de <white><min></white> a <white><max></white> caracteres."
+    chars: "<red>La etiqueta contiene caracteres no permitidos."
+    blacklisted: "<red>La etiqueta contiene la palabra prohibida <white><word></white>."
+    taken: "<red>La etiqueta <white><tag></white> ya la usa el clan <white><clan></white>."
+    none: "<red>Ese clan no tiene etiqueta."
+    unknown: "<red>Ningun clan usa la etiqueta <white><tag></white>."
+  format:
+    disabled: "<red>El formato <white><format></white> esta desactivado en este servidor."
+    no-permission: "<red>No puedes usar el formato <white><format></white>."
+  color:
+    hex-denied: "<red>Solo puedes usar los 16 colores basicos."
+    invalid-hex: "<red>Ese codigo hex no es valido. Usa algo como <white>#FF8800</white>."
+  gradient:
+    disabled: "<red>Los degradados estan desactivados en este servidor."
+    no-permission: "<red>No puedes usar degradados."
+    needs-hex: "<red>Los degradados necesitan permiso para colores hex."
+  cooldown: "<red>Tu clan podra cambiar la etiqueta de nuevo en <white><time></white>."
+
+ok:
+  clan:
+    created: "<green>Clan <white><clan></white> creado. Abre <white>/clantag</white> para crear la etiqueta."
+    disbanded: "<green>Clan <white><clan></white> disuelto."
+    left: "<green>Has salido del clan <white><clan></white>."
+  invite:
+    sent: "<green>Has invitado a <white><player></white> a <white><clan></white>."
+    accepted: "<green>Te has unido a <white><clan></white>."
+    denied: "<green>Invitacion de <white><clan></white> rechazada."
+  member:
+    kicked: "<green><white><player></white> fue expulsado del clan."
+  owner:
+    transferred: "<green><white><player></white> es ahora el dueño del clan."
+  tag:
+    set: "<green>La etiqueta del clan ahora es <white><tag></white>."
+  admin:
+    removed: "<green>Se quito la etiqueta del clan <white><clan></white>."
+    deleted: "<green>Se elimino el clan <white><clan></white> con la etiqueta <white><tag></white>."
+
+note:
+  invited: "<white><player></white> te invito al clan <white><clan></white>. Usa <white>/clantag accept <clan></white> en <white><seconds></white> s o abre <white>/clantag</white>."
+  joined: "<white><player></white> se unio al clan."
+  left: "<white><player></white> salio del clan."
+  kicked: "<red>Te expulsaron del clan <white><clan></white>."
+  transferred: "<white><player></white> es el nuevo dueño del clan."
+  disbanded: "<red>El clan <white><clan></white> fue disuelto."
+
+input:
+  clan-name: "<yellow>Escribe el nombre de tu clan en el chat."
+  tag-text: "<yellow>Escribe el texto de la etiqueta en el chat."
+  hex: "<yellow>Escribe un color hex como <white>#FF8800</white> en el chat."
+  hint: "<gray>Escribe <white>cancel</white> para cancelar."
+  timeout: "<red>Se acabo el tiempo para escribir."
+  cancelled: "<gray>Entrada cancelada."
+
+preview:
+  header: "<gold>Vista previa de la etiqueta"
+  nametag: "<gray>Nombre sobre la cabeza: <nametag>"
+  tab: "<gray>Lista de jugadores: <tab>"
+  chat: "<gray>Chat: <chat>"
+
+cmd:
+  reloaded: "<green>Configuracion y archivos de idioma recargados."
+  "on": "<green>EasyClanTags esta encendido."
+  "off": "<yellow>EasyClanTags esta apagado. Las etiquetas se ocultan, no se borro ningun dato."
+  delete-confirm: "<yellow>Esto disuelve tu clan. Usa <white>/<label> delete confirm</white> para continuar."
+  status:
+    - "<gold>Estado de EasyClanTags"
+    - "<gray>Estado: <state>"
+    - "<gray>Clanes: <white><clans></white>, jugadores con etiqueta: <white><tagged></white>"
+    - "<gray>Almacenamiento: <white><storage></white>, idioma: <white><language></white>"
+  help:
+    header: "<gold>Comandos de EasyClanTags"
+    line: "<gray>/<label> <white><sub></white> <gray><usage> - <description>"
+  description:
+    "on": "Encender el plugin"
+    "off": "Apagar el plugin"
+    status: "Mostrar el estado"
+    reload: "Recargar config e idiomas"
+    create: "Crear un clan"
+    delete: "Disolver tu clan"
+    invite: "Invitar a un jugador"
+    accept: "Aceptar una invitacion"
+    deny: "Rechazar una invitacion"
+    leave: "Salir de tu clan"
+    kick: "Expulsar a un miembro"
+    transfer: "Transferir el clan"
+    info: "Mostrar datos de un clan"
+    list: "Listar todos los clanes"
+    admin: "Comandos de administracion"
+  info:
+    - "<gold>Clan <white><clan>"
+    - "<gray>Etiqueta: <tag>"
+    - "<gray>Dueño: <white><owner>"
+    - "<gray>Miembros (<white><members></white>/<white><max></white>): <white><names>"
+  list:
+    header: "<gold>Clanes (<count>)"
+    entry: "<gray>- <white><clan></white> <tag> <dark_gray>(<members> miembros)"
+
+gui:
+  none: "<gray>ninguna"
+  role:
+    owner: "<gold>Dueño"
+    member: "<white>Miembro"
+  status:
+    online: "<green>en linea"
+    offline: "<gray>desconectado"
+  state:
+    "on": "<green>si"
+    "off": "<red>no"
+  preview:
+    disabled: "<gray>(apagado)"
+    sample: "Hola!"
+  gradient:
+    pick-start: "<yellow>Degradado: elige el color inicial"
+    pick-end: "<yellow>Degradado: elige el color final"
+  main:
+    title: "Etiqueta de clan"
+  members:
+    title: "Miembros de <clan>"
+  member-action:
+    title: "Gestionar a <player>"
+  invite:
+    title: "Invitar a un jugador"
+  invites:
+    title: "Tus invitaciones"
+  editor:
+    title: "Editor de etiqueta"
+  confirm:
+    leave:
+      title: "Salir del clan?"
+    disband:
+      title: "Disolver el clan?"
+    transfer:
+      title: "Hacer dueño a <player>?"
+  item:
+    info:
+      name: "<gold>Informacion del clan"
+      lore:
+        - "<gray>Clan: <white><clan>"
+        - "<gray>Etiqueta: <tag>"
+        - "<gray>Dueño: <white><owner>"
+        - "<gray>Miembros: <white><members></white>/<white><max>"
+        - "<gray>Tu rol: <role>"
+      lore-none:
+        - "<gray>No estas en ningun clan."
+        - "<gray>Crea uno o acepta una invitacion."
+    create-clan:
+      name: "<green>Crear un clan"
+      lore:
+        - "<gray>Haz clic y escribe el nombre"
+        - "<gray>del clan en el chat."
+    edit-tag:
+      name: "<yellow>Editar la etiqueta"
+      lore:
+        - "<gray>Etiqueta actual: <tag>"
+        - ""
+        - "<yellow>Clic para abrir el editor"
+      lore-new:
+        - "<gray>Tu clan aun no tiene etiqueta."
+        - ""
+        - "<yellow>Clic para crearla"
+    members:
+      name: "<aqua>Miembros"
+      lore:
+        - "<gray>Ver a todos en <white><clan>"
+      lore-owner:
+        - "<gray>Invita, expulsa o entrega"
+        - "<gray>el clan a otro miembro."
+    preview:
+      name: "<light_purple>Vista previa"
+      lore:
+        - "<gray>Clic para ver la etiqueta sobre la cabeza,"
+        - "<gray>en la lista de jugadores y en el chat."
+    invites:
+      name: "<yellow>Invitaciones"
+      lore:
+        - "<gray>Tienes <white><count></white> invitacion(es) abierta(s)."
+        - "<yellow>Clic para verlas"
+    leave:
+      name: "<red>Salir del clan"
+      lore:
+        - "<gray>Salir de <white><clan></white>."
+    disband:
+      name: "<red>Disolver el clan"
+      lore:
+        - "<gray>Elimina <white><clan></white> y su etiqueta"
+        - "<gray>para todos los miembros."
+    back:
+      name: "<gray>Atras"
+    back-small:
+      name: "<gray>Atras"
+    dialog-confirm:
+      name: "<green>Confirmar"
+    dialog-cancel:
+      name: "<red>Cancelar"
+    invite-entry:
+      name: "<white><clan>"
+      lore:
+        - "<gray>Etiqueta: <tag>"
+        - "<gray>Dueño: <white><owner>"
+        - "<gray>Miembros: <white><members></white>/<white><max>"
+        - ""
+        - "<green>Clic izquierdo: aceptar"
+        - "<red>Clic derecho: rechazar"
+    confirm:
+      name: "<green>Guardar la etiqueta"
+      lore:
+        - "<gray>Comprueba la etiqueta y la guarda"
+        - "<gray>para tu clan."
+    cancel:
+      name: "<red>Cancelar"
+      lore:
+        - "<gray>Descartar todos los cambios."
+    prev-page:
+      name: "<gray>Pagina anterior"
+    next-page:
+      name: "<gray>Pagina siguiente"
+    invite-player:
+      name: "<green>Invitar a un jugador"
+      lore:
+        - "<gray>Elige a un jugador conectado sin clan."
+    member:
+      name: "<white><player>"
+      lore-owner:
+        - "<gold>Dueño"
+        - "<status>"
+      lore-member:
+        - "<gray>Miembro"
+        - "<status>"
+      lore-manage:
+        - "<gray>Miembro"
+        - "<status>"
+        - ""
+        - "<yellow>Clic para gestionar"
+      lore-action:
+        - "<status>"
+      lore-invite:
+        - "<yellow>Clic para invitar"
+    kick:
+      name: "<red>Expulsar a <player>"
+      lore:
+        - "<gray>Saca al jugador del clan."
+    transfer:
+      name: "<gold>Hacer dueño a <player>"
+      lore:
+        - "<gray>Pasas a ser un miembro normal."
+    letter:
+      name: "<letter>"
+      lore:
+        - "<gray>Letra <white><index></white>, color <white><hex>"
+        - ""
+        - "<yellow>Clic para seleccionar"
+      lore-selected:
+        - "<gray>Letra <white><index></white>, color <white><hex>"
+        - ""
+        - "<green>Seleccionada: el siguiente color se aplica aqui"
+    palette:
+      name: "<color>"
+      lore:
+        - "<gray>Clic para usar este color"
+    hex-color:
+      name: "<aqua>Color hex propio"
+      lore:
+        - "<gray>Haz clic y escribe un codigo hex"
+        - "<gray>como <white>#FF8800</white> en el chat."
+    apply-all:
+      name: "<aqua>Mismo color para todas"
+      lore:
+        - "<gray>Copia el color de la letra elegida"
+        - "<gray>a todas las letras."
+    gradient:
+      name: "<light_purple>Degradado"
+      lore:
+        - "<gray>Clic y elige un color inicial"
+        - "<gray>y uno final."
+      lore-start:
+        - "<yellow>Elige ahora el color inicial."
+        - "<gray>Clic de nuevo para cancelar."
+      lore-end:
+        - "<yellow>Elige ahora el color final."
+        - "<gray>Clic de nuevo para cancelar."
+    format-bold:
+      name: "<white><bold>Negrita"
+      lore:
+        - "<gray>Estado: <state>"
+    format-italic:
+      name: "<white><italic>Cursiva"
+      lore:
+        - "<gray>Estado: <state>"
+    format-underline:
+      name: "<white><underlined>Subrayado"
+      lore:
+        - "<gray>Estado: <state>"
+    format-strikethrough:
+      name: "<white><strikethrough>Tachado"
+      lore:
+        - "<gray>Estado: <state>"
+    format-obfuscated:
+      name: "<white><obfuscated>Obf</obfuscated> Ofuscado"
+      lore:
+        - "<gray>Estado: <state>"
+    change-text:
+      name: "<yellow>Cambiar el texto"
+      lore:
+        - "<gray>Haz clic y escribe un texto nuevo."
+        - "<gray>Los colores se mantienen donde encajan."
+    editor-preview:
+      name: "<gold>Vista previa en vivo"
+      lore:
+        - "<gray>Nombre sobre la cabeza: <nametag>"
+        - "<gray>Lista de jugadores: <tab>"
+        - "<gray>Chat: <chat>"

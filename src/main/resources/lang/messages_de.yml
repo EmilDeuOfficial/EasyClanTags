@@ -1,0 +1,338 @@
+prefix: "<dark_gray>[<gold>EasyClanTags</gold>]</dark_gray> <gray>"
+
+err:
+  no-permission: "<red>Dafür hast du keine Berechtigung."
+  player-only: "<red>Dieser Befehl ist nur für Spieler."
+  disabled: "<red>EasyClanTags ist ausgeschaltet."
+  usage: "<red>Benutzung: <white><usage>"
+  player-not-found: "<red>Spieler <white><player></white> wurde nicht gefunden."
+  clan:
+    unknown: "<red>Kein Clan passt zu <white><clan></white>."
+    already: "<red>Du bist bereits in einem Clan."
+    none: "<red>Du bist in keinem Clan."
+    none-other: "<red>Dieser Spieler ist in keinem Clan."
+    not-owner: "<red>Das darf nur der Clan-Besitzer."
+    name-invalid: "<red>Clan-Namen brauchen <white><min></white> bis <white><max></white> erlaubte Zeichen."
+    name-taken: "<red>Der Clan-Name <white><clan></white> ist bereits vergeben."
+    full: "<red>Der Clan ist voll (<white><max></white> Mitglieder)."
+    owner-cannot-leave: "<red>Der Besitzer kann nicht austreten. Übertrage den Clan oder löse ihn auf."
+  target:
+    self: "<red>Das kannst du nicht bei dir selbst tun."
+    in-clan: "<white><player></white> <red>ist bereits in einem Clan."
+    not-member: "<white><player></white> <red>ist nicht in deinem Clan."
+  invite:
+    none: "<red>Du hast keine passende Einladung."
+    choose: "<red>Du hast mehrere Einladungen. Gib den Clan-Namen an."
+  tag:
+    empty: "<red>Der Tag darf nicht leer sein."
+    length: "<red>Der Tag braucht <white><min></white> bis <white><max></white> Zeichen."
+    chars: "<red>Der Tag enthält nicht erlaubte Zeichen."
+    blacklisted: "<red>Der Tag enthält das verbotene Wort <white><word></white>."
+    taken: "<red>Der Tag <white><tag></white> wird bereits vom Clan <white><clan></white> genutzt."
+    none: "<red>Dieser Clan hat keinen Tag."
+    unknown: "<red>Kein Clan nutzt den Tag <white><tag></white>."
+  format:
+    disabled: "<red>Das Format <white><format></white> ist auf diesem Server abgeschaltet."
+    no-permission: "<red>Du darfst das Format <white><format></white> nicht nutzen."
+  color:
+    hex-denied: "<red>Du darfst nur die 16 Standardfarben nutzen."
+    invalid-hex: "<red>Das ist kein gültiger Hex-Code. Nutze zum Beispiel <white>#FF8800</white>."
+  gradient:
+    disabled: "<red>Verläufe sind auf diesem Server abgeschaltet."
+    no-permission: "<red>Du darfst keine Verläufe nutzen."
+    needs-hex: "<red>Verläufe brauchen die Berechtigung für Hex-Farben."
+  cooldown: "<red>Dein Clan kann den Tag in <white><time></white> wieder ändern."
+
+ok:
+  clan:
+    created: "<green>Clan <white><clan></white> erstellt. Öffne <white>/clantag</white>, um den Tag zu erstellen."
+    disbanded: "<green>Clan <white><clan></white> aufgelöst."
+    left: "<green>Du hast den Clan <white><clan></white> verlassen."
+  invite:
+    sent: "<green><white><player></white> wurde in <white><clan></white> eingeladen."
+    accepted: "<green>Du bist <white><clan></white> beigetreten."
+    denied: "<green>Einladung von <white><clan></white> abgelehnt."
+  member:
+    kicked: "<green><white><player></white> wurde aus dem Clan entfernt."
+  owner:
+    transferred: "<green><white><player></white> ist jetzt Clan-Besitzer."
+  tag:
+    set: "<green>Der Clan-Tag lautet jetzt <white><tag></white>."
+  admin:
+    removed: "<green>Tag des Clans <white><clan></white> entfernt."
+    deleted: "<green>Clan <white><clan></white> mit dem Tag <white><tag></white> gelöscht."
+
+note:
+  invited: "<white><player></white> hat dich in den Clan <white><clan></white> eingeladen. Nutze <white>/clantag accept <clan></white> innerhalb von <white><seconds></white> s oder öffne <white>/clantag</white>."
+  joined: "<white><player></white> ist dem Clan beigetreten."
+  left: "<white><player></white> hat den Clan verlassen."
+  kicked: "<red>Du wurdest aus dem Clan <white><clan></white> entfernt."
+  transferred: "<white><player></white> ist der neue Besitzer des Clans."
+  disbanded: "<red>Der Clan <white><clan></white> wurde aufgelöst."
+
+input:
+  clan-name: "<yellow>Schreibe den Namen deines Clans in den Chat."
+  tag-text: "<yellow>Schreibe den Tag-Text in den Chat."
+  hex: "<yellow>Schreibe eine Hex-Farbe wie <white>#FF8800</white> in den Chat."
+  hint: "<gray>Schreibe <white>cancel</white> zum Abbrechen."
+  timeout: "<red>Die Eingabe ist abgelaufen."
+  cancelled: "<gray>Eingabe abgebrochen."
+
+preview:
+  header: "<gold>Tag-Vorschau"
+  nametag: "<gray>Nametag: <nametag>"
+  tab: "<gray>Tab-Liste: <tab>"
+  chat: "<gray>Chat: <chat>"
+
+cmd:
+  reloaded: "<green>Konfiguration und Sprachdateien neu geladen."
+  "on": "<green>EasyClanTags ist jetzt an."
+  "off": "<yellow>EasyClanTags ist jetzt aus. Tags sind versteckt, es wurden keine Daten gelöscht."
+  delete-confirm: "<yellow>Das löst deinen Clan auf. Nutze <white>/<label> delete confirm</white>, um fortzufahren."
+  status:
+    - "<gold>EasyClanTags Status"
+    - "<gray>Zustand: <state>"
+    - "<gray>Clans: <white><clans></white>, Spieler mit Tag: <white><tagged></white>"
+    - "<gray>Speicher: <white><storage></white>, Sprache: <white><language></white>"
+  help:
+    header: "<gold>EasyClanTags Befehle"
+    line: "<gray>/<label> <white><sub></white> <gray><usage> - <description>"
+  description:
+    "on": "Plugin einschalten"
+    "off": "Plugin ausschalten"
+    status: "Aktuellen Zustand zeigen"
+    reload: "Config und Sprachdateien neu laden"
+    create: "Clan erstellen"
+    delete: "Eigenen Clan auflösen"
+    invite: "Spieler einladen"
+    accept: "Einladung annehmen"
+    deny: "Einladung ablehnen"
+    leave: "Clan verlassen"
+    kick: "Mitglied entfernen"
+    transfer: "Besitz übertragen"
+    info: "Clan-Details zeigen"
+    list: "Alle Clans auflisten"
+    admin: "Verwaltungsbefehle"
+  info:
+    - "<gold>Clan <white><clan>"
+    - "<gray>Tag: <tag>"
+    - "<gray>Besitzer: <white><owner>"
+    - "<gray>Mitglieder (<white><members></white>/<white><max></white>): <white><names>"
+  list:
+    header: "<gold>Clans (<count>)"
+    entry: "<gray>- <white><clan></white> <tag> <dark_gray>(<members> Mitglieder)"
+
+gui:
+  none: "<gray>keiner"
+  role:
+    owner: "<gold>Besitzer"
+    member: "<white>Mitglied"
+  status:
+    online: "<green>online"
+    offline: "<gray>offline"
+  state:
+    "on": "<green>an"
+    "off": "<red>aus"
+  preview:
+    disabled: "<gray>(aus)"
+    sample: "Hallo!"
+  gradient:
+    pick-start: "<yellow>Verlauf: Wähle die Startfarbe"
+    pick-end: "<yellow>Verlauf: Wähle die Endfarbe"
+  main:
+    title: "Clan-Tag"
+  members:
+    title: "Mitglieder von <clan>"
+  member-action:
+    title: "<player> verwalten"
+  invite:
+    title: "Spieler einladen"
+  invites:
+    title: "Deine Einladungen"
+  editor:
+    title: "Tag-Editor"
+  confirm:
+    leave:
+      title: "Clan verlassen?"
+    disband:
+      title: "Clan auflösen?"
+    transfer:
+      title: "<player> zum Besitzer machen?"
+  item:
+    info:
+      name: "<gold>Clan-Informationen"
+      lore:
+        - "<gray>Clan: <white><clan>"
+        - "<gray>Tag: <tag>"
+        - "<gray>Besitzer: <white><owner>"
+        - "<gray>Mitglieder: <white><members></white>/<white><max>"
+        - "<gray>Deine Rolle: <role>"
+      lore-none:
+        - "<gray>Du bist in keinem Clan."
+        - "<gray>Erstelle einen oder nimm eine Einladung an."
+    create-clan:
+      name: "<green>Clan erstellen"
+      lore:
+        - "<gray>Klicken und den Clan-Namen"
+        - "<gray>in den Chat schreiben."
+    edit-tag:
+      name: "<yellow>Tag bearbeiten"
+      lore:
+        - "<gray>Aktueller Tag: <tag>"
+        - ""
+        - "<yellow>Klicken, um den Editor zu öffnen"
+      lore-new:
+        - "<gray>Dein Clan hat noch keinen Tag."
+        - ""
+        - "<yellow>Klicken, um ihn zu erstellen"
+    members:
+      name: "<aqua>Mitglieder"
+      lore:
+        - "<gray>Alle Mitglieder von <white><clan></white> anzeigen"
+      lore-owner:
+        - "<gray>Einladen, entfernen oder den Clan"
+        - "<gray>an ein anderes Mitglied übergeben."
+    preview:
+      name: "<light_purple>Tag-Vorschau"
+      lore:
+        - "<gray>Klicken, um den Tag im Nametag,"
+        - "<gray>in der Tab-Liste und im Chat zu sehen."
+    invites:
+      name: "<yellow>Einladungen"
+      lore:
+        - "<gray>Du hast <white><count></white> offene Einladung(en)."
+        - "<yellow>Klicken zum Ansehen"
+    leave:
+      name: "<red>Clan verlassen"
+      lore:
+        - "<white><clan></white> verlassen."
+    disband:
+      name: "<red>Clan auflösen"
+      lore:
+        - "<gray><white><clan></white> und den Tag für"
+        - "<gray>alle Mitglieder löschen."
+    back:
+      name: "<gray>Zurück"
+    back-small:
+      name: "<gray>Zurück"
+    dialog-confirm:
+      name: "<green>Bestätigen"
+    dialog-cancel:
+      name: "<red>Abbrechen"
+    invite-entry:
+      name: "<white><clan>"
+      lore:
+        - "<gray>Tag: <tag>"
+        - "<gray>Besitzer: <white><owner>"
+        - "<gray>Mitglieder: <white><members></white>/<white><max>"
+        - ""
+        - "<green>Linksklick: annehmen"
+        - "<red>Rechtsklick: ablehnen"
+    confirm:
+      name: "<green>Tag speichern"
+      lore:
+        - "<gray>Prüft den Tag und speichert ihn"
+        - "<gray>für deinen Clan."
+    cancel:
+      name: "<red>Abbrechen"
+      lore:
+        - "<gray>Alle Änderungen verwerfen."
+    prev-page:
+      name: "<gray>Vorherige Seite"
+    next-page:
+      name: "<gray>Nächste Seite"
+    invite-player:
+      name: "<green>Spieler einladen"
+      lore:
+        - "<gray>Wähle einen Online-Spieler ohne Clan."
+    member:
+      name: "<white><player>"
+      lore-owner:
+        - "<gold>Besitzer"
+        - "<status>"
+      lore-member:
+        - "<gray>Mitglied"
+        - "<status>"
+      lore-manage:
+        - "<gray>Mitglied"
+        - "<status>"
+        - ""
+        - "<yellow>Klicken zum Verwalten"
+      lore-action:
+        - "<status>"
+      lore-invite:
+        - "<yellow>Klicken zum Einladen"
+    kick:
+      name: "<red><player> entfernen"
+      lore:
+        - "<gray>Entfernt den Spieler aus dem Clan."
+    transfer:
+      name: "<gold><player> zum Besitzer machen"
+      lore:
+        - "<gray>Du wirst ein normales Mitglied."
+    letter:
+      name: "<letter>"
+      lore:
+        - "<gray>Buchstabe <white><index></white>, Farbe <white><hex>"
+        - ""
+        - "<yellow>Klicken zum Auswählen"
+      lore-selected:
+        - "<gray>Buchstabe <white><index></white>, Farbe <white><hex>"
+        - ""
+        - "<green>Ausgewählt: die nächste Farbe gilt hier"
+    palette:
+      name: "<color>"
+      lore:
+        - "<gray>Klicken, um diese Farbe zu nutzen"
+    hex-color:
+      name: "<aqua>Eigene Hex-Farbe"
+      lore:
+        - "<gray>Klicken und einen Hex-Code wie"
+        - "<white>#FF8800</white> <gray>in den Chat schreiben."
+    apply-all:
+      name: "<aqua>Gleiche Farbe für alle"
+      lore:
+        - "<gray>Kopiert die Farbe des gewählten"
+        - "<gray>Buchstabens auf alle Buchstaben."
+    gradient:
+      name: "<light_purple>Verlauf"
+      lore:
+        - "<gray>Klicken, dann Startfarbe und"
+        - "<gray>Endfarbe wählen."
+      lore-start:
+        - "<yellow>Wähle jetzt die Startfarbe."
+        - "<gray>Erneut klicken zum Abbrechen."
+      lore-end:
+        - "<yellow>Wähle jetzt die Endfarbe."
+        - "<gray>Erneut klicken zum Abbrechen."
+    format-bold:
+      name: "<white><bold>Fett"
+      lore:
+        - "<gray>Zustand: <state>"
+    format-italic:
+      name: "<white><italic>Kursiv"
+      lore:
+        - "<gray>Zustand: <state>"
+    format-underline:
+      name: "<white><underlined>Unterstrichen"
+      lore:
+        - "<gray>Zustand: <state>"
+    format-strikethrough:
+      name: "<white><strikethrough>Durchgestrichen"
+      lore:
+        - "<gray>Zustand: <state>"
+    format-obfuscated:
+      name: "<white><obfuscated>Obf</obfuscated> Verschleiert"
+      lore:
+        - "<gray>Zustand: <state>"
+    change-text:
+      name: "<yellow>Text ändern"
+      lore:
+        - "<gray>Klicken und einen neuen Tag-Text schreiben."
+        - "<gray>Farben bleiben, wo sie passen."
+    editor-preview:
+      name: "<gold>Live-Vorschau"
+      lore:
+        - "<gray>Nametag: <nametag>"
+        - "<gray>Tab-Liste: <tab>"
+        - "<gray>Chat: <chat>"

@@ -1,0 +1,127 @@
+name: EasyClanTags
+version: '${project.version}'
+main: de.emilo.easyclantags.EasyClanTags
+api-version: '${plugin.api-version}'
+description: Clan tags with per-letter colors for nametag, tab list and chat
+authors: [EmilDeuOfficial]
+website: https://github.com/EmilDeuOfficial/EasyClanTags
+
+commands:
+  clantag:
+    description: Open the clan tag menu or manage clans and tags
+    usage: /<command> [on|off|status|reload|create|delete|invite|accept|deny|leave|kick|transfer|info|list|admin]
+    aliases: [ct]
+
+permissions:
+  easyclantags.admin:
+    description: Grants every EasyClanTags permission
+    default: op
+    children:
+      easyclantags.use: true
+      easyclantags.toggle: true
+      easyclantags.status: true
+      easyclantags.reload: true
+      easyclantags.create: true
+      easyclantags.delete: true
+      easyclantags.invite: true
+      easyclantags.accept: true
+      easyclantags.leave: true
+      easyclantags.kick: true
+      easyclantags.transfer: true
+      easyclantags.info: true
+      easyclantags.list: true
+      easyclantags.edit: true
+      easyclantags.admin.set: true
+      easyclantags.admin.remove: true
+      easyclantags.admin.delete: true
+      easyclantags.color.hex: true
+      easyclantags.gradient: true
+      easyclantags.format.bold: true
+      easyclantags.format.italic: true
+      easyclantags.format.underline: true
+      easyclantags.format.strikethrough: true
+      easyclantags.format.obfuscated: true
+      easyclantags.bypass.blacklist: true
+      easyclantags.bypass.cooldown: true
+      easyclantags.chat.colors: true
+  easyclantags.use:
+    description: Open the clan menu with /clantag
+    default: true
+  easyclantags.toggle:
+    description: Use /clantag on and /clantag off
+    default: op
+  easyclantags.status:
+    description: Use /clantag status
+    default: op
+  easyclantags.reload:
+    description: Use /clantag reload
+    default: op
+  easyclantags.create:
+    description: Create a clan
+    default: true
+  easyclantags.delete:
+    description: Disband the own clan
+    default: true
+  easyclantags.invite:
+    description: Invite players into the own clan
+    default: true
+  easyclantags.accept:
+    description: Accept or deny clan invites
+    default: true
+  easyclantags.leave:
+    description: Leave the current clan
+    default: true
+  easyclantags.kick:
+    description: Kick members from the own clan
+    default: true
+  easyclantags.transfer:
+    description: Transfer clan ownership
+    default: true
+  easyclantags.info:
+    description: Show clan information
+    default: true
+  easyclantags.list:
+    description: List all clans
+    default: true
+  easyclantags.edit:
+    description: Create and edit the own clan tag
+    default: true
+  easyclantags.admin.set:
+    description: Use /clantag admin set
+    default: op
+  easyclantags.admin.remove:
+    description: Use /clantag admin remove
+    default: op
+  easyclantags.admin.delete:
+    description: Use /clantag admin delete
+    default: op
+  easyclantags.color.hex:
+    description: Use any hex color in a tag instead of the 16 default colors
+    default: true
+  easyclantags.gradient:
+    description: Use gradients in a tag
+    default: true
+  easyclantags.format.bold:
+    description: Use bold in a tag
+    default: true
+  easyclantags.format.italic:
+    description: Use italic in a tag
+    default: true
+  easyclantags.format.underline:
+    description: Use underline in a tag
+    default: true
+  easyclantags.format.strikethrough:
+    description: Use strikethrough in a tag
+    default: true
+  easyclantags.format.obfuscated:
+    description: Use obfuscated text in a tag
+    default: op
+  easyclantags.bypass.blacklist:
+    description: Use words from the tag blacklist
+    default: op
+  easyclantags.bypass.cooldown:
+    description: Ignore the tag change cooldown
+    default: op
+  easyclantags.chat.colors:
+    description: Use MiniMessage formatting in chat messages
+    default: op

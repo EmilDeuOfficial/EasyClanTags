@@ -1,0 +1,338 @@
+prefix: "<dark_gray>[<gold>EasyClanTags</gold>]</dark_gray> <gray>"
+
+err:
+  no-permission: "<red>你没有执行此操作的权限。"
+  player-only: "<red>此命令只能由玩家使用。"
+  disabled: "<red>EasyClanTags 已关闭。"
+  usage: "<red>用法: <white><usage>"
+  player-not-found: "<red>找不到玩家 <white><player></white>。"
+  clan:
+    unknown: "<red>没有与 <white><clan></white> 匹配的公会。"
+    already: "<red>你已经在一个公会中。"
+    none: "<red>你不在任何公会中。"
+    none-other: "<red>该玩家不在任何公会中。"
+    not-owner: "<red>只有公会所有者可以这样做。"
+    name-invalid: "<red>公会名称需要 <white><min></white> 到 <white><max></white> 个允许的字符。"
+    name-taken: "<red>公会名称 <white><clan></white> 已被使用。"
+    full: "<red>公会已满 (<white><max></white> 名成员)。"
+    owner-cannot-leave: "<red>所有者不能退出。请转让公会或解散它。"
+  target:
+    self: "<red>你不能对自己执行此操作。"
+    in-clan: "<white><player></white> <red>已经在一个公会中。"
+    not-member: "<white><player></white> <red>不在你的公会中。"
+  invite:
+    none: "<red>你没有匹配的邀请。"
+    choose: "<red>你有多个邀请。请填写公会名称。"
+  tag:
+    empty: "<red>标签不能为空。"
+    length: "<red>标签需要 <white><min></white> 到 <white><max></white> 个字符。"
+    chars: "<red>标签包含不允许的字符。"
+    blacklisted: "<red>标签包含禁用词 <white><word></white>。"
+    taken: "<red>标签 <white><tag></white> 已被公会 <white><clan></white> 使用。"
+    none: "<red>该公会没有标签。"
+    unknown: "<red>没有公会使用标签 <white><tag></white>。"
+  format:
+    disabled: "<red>格式 <white><format></white> 在此服务器上已禁用。"
+    no-permission: "<red>你不能使用格式 <white><format></white>。"
+  color:
+    hex-denied: "<red>你只能使用 16 种默认颜色。"
+    invalid-hex: "<red>这不是有效的十六进制代码。例如 <white>#FF8800</white>。"
+  gradient:
+    disabled: "<red>渐变在此服务器上已禁用。"
+    no-permission: "<red>你不能使用渐变。"
+    needs-hex: "<red>渐变需要十六进制颜色的权限。"
+  cooldown: "<red>你的公会可在 <white><time></white> 后再次修改标签。"
+
+ok:
+  clan:
+    created: "<green>公会 <white><clan></white> 已创建。打开 <white>/clantag</white> 来创建标签。"
+    disbanded: "<green>公会 <white><clan></white> 已解散。"
+    left: "<green>你已退出公会 <white><clan></white>。"
+  invite:
+    sent: "<green>已邀请 <white><player></white> 加入 <white><clan></white>。"
+    accepted: "<green>你已加入 <white><clan></white>。"
+    denied: "<green>已拒绝 <white><clan></white> 的邀请。"
+  member:
+    kicked: "<green><white><player></white> 已被移出公会。"
+  owner:
+    transferred: "<green><white><player></white> 现在是公会所有者。"
+  tag:
+    set: "<green>公会标签现在是 <white><tag></white>。"
+  admin:
+    removed: "<green>已移除公会 <white><clan></white> 的标签。"
+    deleted: "<green>已删除标签为 <white><tag></white> 的公会 <white><clan></white>。"
+
+note:
+  invited: "<white><player></white> 邀请你加入公会 <white><clan></white>。请在 <white><seconds></white> 秒内使用 <white>/clantag accept <clan></white>，或打开 <white>/clantag</white>。"
+  joined: "<white><player></white> 加入了公会。"
+  left: "<white><player></white> 退出了公会。"
+  kicked: "<red>你已被移出公会 <white><clan></white>。"
+  transferred: "<white><player></white> 是公会的新所有者。"
+  disbanded: "<red>公会 <white><clan></white> 已被解散。"
+
+input:
+  clan-name: "<yellow>请在聊天中输入公会名称。"
+  tag-text: "<yellow>请在聊天中输入标签文字。"
+  hex: "<yellow>请在聊天中输入十六进制颜色，例如 <white>#FF8800</white>。"
+  hint: "<gray>输入 <white>cancel</white> 取消。"
+  timeout: "<red>输入超时。"
+  cancelled: "<gray>已取消输入。"
+
+preview:
+  header: "<gold>标签预览"
+  nametag: "<gray>名称标签: <nametag>"
+  tab: "<gray>玩家列表: <tab>"
+  chat: "<gray>聊天: <chat>"
+
+cmd:
+  reloaded: "<green>配置和语言文件已重新加载。"
+  "on": "<green>EasyClanTags 已开启。"
+  "off": "<yellow>EasyClanTags 已关闭。标签被隐藏，数据未被删除。"
+  delete-confirm: "<yellow>这将解散你的公会。请执行 <white>/<label> delete confirm</white> 继续。"
+  status:
+    - "<gold>EasyClanTags 状态"
+    - "<gray>状态: <state>"
+    - "<gray>公会数量: <white><clans></white>，拥有标签的玩家: <white><tagged></white>"
+    - "<gray>存储: <white><storage></white>，语言: <white><language></white>"
+  help:
+    header: "<gold>EasyClanTags 命令"
+    line: "<gray>/<label> <white><sub></white> <gray><usage> - <description>"
+  description:
+    "on": "开启插件"
+    "off": "关闭插件"
+    status: "显示当前状态"
+    reload: "重新加载配置和语言文件"
+    create: "创建公会"
+    delete: "解散你的公会"
+    invite: "邀请玩家"
+    accept: "接受邀请"
+    deny: "拒绝邀请"
+    leave: "退出公会"
+    kick: "移出成员"
+    transfer: "转让所有权"
+    info: "显示公会详情"
+    list: "列出所有公会"
+    admin: "管理命令"
+  info:
+    - "<gold>公会 <white><clan>"
+    - "<gray>标签: <tag>"
+    - "<gray>所有者: <white><owner>"
+    - "<gray>成员 (<white><members></white>/<white><max></white>): <white><names>"
+  list:
+    header: "<gold>公会列表 (<count>)"
+    entry: "<gray>- <white><clan></white> <tag> <dark_gray>(<members> 名成员)"
+
+gui:
+  none: "<gray>无"
+  role:
+    owner: "<gold>所有者"
+    member: "<white>成员"
+  status:
+    online: "<green>在线"
+    offline: "<gray>离线"
+  state:
+    "on": "<green>开"
+    "off": "<red>关"
+  preview:
+    disabled: "<gray>(关闭)"
+    sample: "大家好!"
+  gradient:
+    pick-start: "<yellow>渐变: 请选择起始颜色"
+    pick-end: "<yellow>渐变: 请选择结束颜色"
+  main:
+    title: "公会标签"
+  members:
+    title: "<clan> 的成员"
+  member-action:
+    title: "管理 <player>"
+  invite:
+    title: "邀请玩家"
+  invites:
+    title: "你的邀请"
+  editor:
+    title: "标签编辑器"
+  confirm:
+    leave:
+      title: "退出公会?"
+    disband:
+      title: "解散公会?"
+    transfer:
+      title: "让 <player> 成为所有者?"
+  item:
+    info:
+      name: "<gold>公会信息"
+      lore:
+        - "<gray>公会: <white><clan>"
+        - "<gray>标签: <tag>"
+        - "<gray>所有者: <white><owner>"
+        - "<gray>成员: <white><members></white>/<white><max>"
+        - "<gray>你的身份: <role>"
+      lore-none:
+        - "<gray>你不在任何公会中。"
+        - "<gray>创建一个公会或接受邀请。"
+    create-clan:
+      name: "<green>创建公会"
+      lore:
+        - "<gray>点击后在聊天中"
+        - "<gray>输入公会名称。"
+    edit-tag:
+      name: "<yellow>编辑标签"
+      lore:
+        - "<gray>当前标签: <tag>"
+        - ""
+        - "<yellow>点击打开编辑器"
+      lore-new:
+        - "<gray>你的公会还没有标签。"
+        - ""
+        - "<yellow>点击创建"
+    members:
+      name: "<aqua>成员"
+      lore:
+        - "<gray>查看 <white><clan></white> 的所有成员"
+      lore-owner:
+        - "<gray>邀请、移出成员，或将公会"
+        - "<gray>转让给其他成员。"
+    preview:
+      name: "<light_purple>标签预览"
+      lore:
+        - "<gray>点击查看标签在名称标签、"
+        - "<gray>玩家列表和聊天中的效果。"
+    invites:
+      name: "<yellow>邀请"
+      lore:
+        - "<gray>你有 <white><count></white> 个未处理的邀请。"
+        - "<yellow>点击查看"
+    leave:
+      name: "<red>退出公会"
+      lore:
+        - "<gray>退出 <white><clan></white>。"
+    disband:
+      name: "<red>解散公会"
+      lore:
+        - "<gray>为所有成员删除 <white><clan></white>"
+        - "<gray>及其标签。"
+    back:
+      name: "<gray>返回"
+    back-small:
+      name: "<gray>返回"
+    dialog-confirm:
+      name: "<green>确认"
+    dialog-cancel:
+      name: "<red>取消"
+    invite-entry:
+      name: "<white><clan>"
+      lore:
+        - "<gray>标签: <tag>"
+        - "<gray>所有者: <white><owner>"
+        - "<gray>成员: <white><members></white>/<white><max>"
+        - ""
+        - "<green>左键: 接受"
+        - "<red>右键: 拒绝"
+    confirm:
+      name: "<green>保存标签"
+      lore:
+        - "<gray>检查标签并为你的公会"
+        - "<gray>保存。"
+    cancel:
+      name: "<red>取消"
+      lore:
+        - "<gray>放弃所有更改。"
+    prev-page:
+      name: "<gray>上一页"
+    next-page:
+      name: "<gray>下一页"
+    invite-player:
+      name: "<green>邀请玩家"
+      lore:
+        - "<gray>选择一名没有公会的在线玩家。"
+    member:
+      name: "<white><player>"
+      lore-owner:
+        - "<gold>所有者"
+        - "<status>"
+      lore-member:
+        - "<gray>成员"
+        - "<status>"
+      lore-manage:
+        - "<gray>成员"
+        - "<status>"
+        - ""
+        - "<yellow>点击管理"
+      lore-action:
+        - "<status>"
+      lore-invite:
+        - "<yellow>点击邀请"
+    kick:
+      name: "<red>移出 <player>"
+      lore:
+        - "<gray>将该玩家移出公会。"
+    transfer:
+      name: "<gold>让 <player> 成为所有者"
+      lore:
+        - "<gray>你将成为普通成员。"
+    letter:
+      name: "<letter>"
+      lore:
+        - "<gray>第 <white><index></white> 个字符，颜色 <white><hex>"
+        - ""
+        - "<yellow>点击选择"
+      lore-selected:
+        - "<gray>第 <white><index></white> 个字符，颜色 <white><hex>"
+        - ""
+        - "<green>已选中: 下一个颜色将应用于此"
+    palette:
+      name: "<color>"
+      lore:
+        - "<gray>点击使用此颜色"
+    hex-color:
+      name: "<aqua>自定义十六进制颜色"
+      lore:
+        - "<gray>点击后在聊天中输入"
+        - "<gray>如 <white>#FF8800</white> 的十六进制代码。"
+    apply-all:
+      name: "<aqua>所有字符使用同一颜色"
+      lore:
+        - "<gray>将选中字符的颜色"
+        - "<gray>复制到所有字符。"
+    gradient:
+      name: "<light_purple>渐变"
+      lore:
+        - "<gray>点击后依次选择起始颜色"
+        - "<gray>和结束颜色。"
+      lore-start:
+        - "<yellow>现在请选择起始颜色。"
+        - "<gray>再次点击可取消。"
+      lore-end:
+        - "<yellow>现在请选择结束颜色。"
+        - "<gray>再次点击可取消。"
+    format-bold:
+      name: "<white><bold>粗体"
+      lore:
+        - "<gray>状态: <state>"
+    format-italic:
+      name: "<white><italic>斜体"
+      lore:
+        - "<gray>状态: <state>"
+    format-underline:
+      name: "<white><underlined>下划线"
+      lore:
+        - "<gray>状态: <state>"
+    format-strikethrough:
+      name: "<white><strikethrough>删除线"
+      lore:
+        - "<gray>状态: <state>"
+    format-obfuscated:
+      name: "<white><obfuscated>Obf</obfuscated> 乱码"
+      lore:
+        - "<gray>状态: <state>"
+    change-text:
+      name: "<yellow>修改文字"
+      lore:
+        - "<gray>点击后输入新的标签文字。"
+        - "<gray>颜色会保留在对应位置。"
+    editor-preview:
+      name: "<gold>实时预览"
+      lore:
+        - "<gray>名称标签: <nametag>"
+        - "<gray>玩家列表: <tab>"
+        - "<gray>聊天: <chat>"
